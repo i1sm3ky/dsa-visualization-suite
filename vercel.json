@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/landing" },
+    { "source": "/sorting", "destination": "/sorting" },
+    { "source": "/searching", "destination": "/searching" },
+    { "source": "/pathfinding", "destination": "/pathfinding" }
+  ]
+}

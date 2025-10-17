@@ -1,0 +1,135 @@
+.edge {
+  position: relative;
+  --width: 2px;
+  transition: height 0.3s, width 0.3s;
+  will-change: height, width;
+}
+
+.grid-mode .edge {
+  height: 0%;
+  width: 0%;
+}
+
+.graph-mode .edge {
+  height: 100%;
+  width: 100%;
+}
+
+.edge-line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.edge-horizontal .edge-line {
+  top: 50%;
+  transform: translateY(-50%);
+  height: var(--width);
+  width: var(--length);
+  transition: width 0.3s;
+  will-change: width;
+}
+
+.edge-vertical .edge-line {
+  left: 50%;
+  transform: translateX(-50%);
+  height: var(--length);
+  width: var(--width);
+  transition: height 0.3s;
+  will-change: height;
+}
+
+.shift-edge-right {
+  animation: shift-edge-right 0.5s forwards;
+}
+
+.shift-edge-down {
+  animation: shift-edge-down 0.5s forwards;
+}
+
+@keyframes shift-edge-right {
+  from {
+    right: initial;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes shift-edge-down {
+  from {
+    bottom: initial;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+.edge-traverse-style-visit::after {
+  background-color: aqua;
+}
+
+.edge-traverse-style-path::after {
+  background-color: red;
+}
+
+.edge-traverse-left-to-right::after,
+.edge-traverse-right-to-left::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.edge-horizontal .edge-traverse-left-to-right::after {
+  animation: left-to-right-horizontal 0.3s forwards ease-in-out;
+}
+
+.edge-vertical .edge-traverse-left-to-right::after {
+  animation: left-to-right-vertical 0.3s forwards ease-in-out;
+}
+
+@keyframes left-to-right-horizontal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes left-to-right-vertical {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.edge-horizontal .edge-traverse-right-to-left::after {
+  animation: right-to-left-horizontal 0.3s forwards ease-in-out;
+}
+
+.edge-vertical .edge-traverse-right-to-left::after {
+  animation: right-to-left-vertical 0.3s forwards ease-in-out;
+}
+
+@keyframes right-to-left-horizontal {
+  from {
+    right: 0;
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes right-to-left-vertical {
+  from {
+    bottom: 0;
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}

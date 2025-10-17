@@ -1,0 +1,101 @@
+.dropdown {
+  margin: 0 0.25em 0 0.5em;
+}
+
+.dropdown-btn {
+  padding: 0.5em 0.75em;
+  font-size: 1em;
+  background-color: #343434;
+  border: 2px solid #555555;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  min-width: 10em;
+}
+
+.dropdown-btn:hover {
+  background-color: #444444;
+}
+
+.dropdown-btn:focus {
+  background-color: #555555;
+  border: 2px solid #666666;
+}
+
+.dropdown-btn:disabled {
+  pointer-events: none;
+}
+
+.dropdown-option {
+  transition: opacity 0.3s;
+  will-change: opacity;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s, scale 0.3s;
+  will-change: transform, scale;
+}
+
+.dropdown-btn:hover > .dropdown-icon {
+  scale: 1.1;
+}
+
+.dropdown-content {
+  position: absolute;
+  height: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: height 0.5s;
+  will-change: height;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-content > a {
+  height: calc(2em + 10px);
+  width: calc(100% - 2px);
+  min-width: calc(10em - 2px);
+  margin-left: 1px;
+  display: none;
+  opacity: 0;
+  background-color: #343434;
+  color: aliceblue;
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: transform 0.5s, opacity 0.3s, background-color 0.3s;
+  will-change: transform, opacity, background-color;
+}
+
+.dropdown-content > a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 90%;
+  left: 5%;
+  bottom: 0;
+  background-color: #222222;
+}
+
+.dropdown-content > a:hover {
+  background-color: #292929;
+  scale: 1.05;
+}
+
+.dropdown-content > a:first-child {
+  border-radius: 0 5px 0 0;
+}
+
+.dropdown-content > a:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content > a:last-child::after {
+  background: none;
+}
