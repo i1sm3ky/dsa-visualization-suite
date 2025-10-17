@@ -15,7 +15,7 @@ function Card({ logo, title, link, color1, color2, children }) {
             <div className="card-title-2">Visualizer</div>
             <div className="card-callback-div">
               {link ? (
-                <a className="card-btn" href={link} target="_blank">
+                <a className="card-btn" href={link}>
                   Visit
                 </a>
               ) : (

@@ -8,7 +8,7 @@ Whether you're a beginner trying to grasp the basics or just someone who enjoys 
 
 ## Visit Site
 
-[https://dsa-visualization-suite.vercel.app](SITE)
+[LINK](https://dsa-visualization-suite.vercel.app)
 
 ---
 
@@ -54,7 +54,7 @@ Each module is a standalone React app hosted together under one suite.
 
 No installation needed — it’s a web app!
 
-Just visit the [https://dsa-visualization-suite.vercel.app](SITE) and explore the modules:
+Just visit the [LINK](https://dsa-visualization-suite.vercel.app) and explore the modules:
 
 - Play with array size, speed, and animations
 - Compare how different algorithms behave
