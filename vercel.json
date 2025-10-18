@@ -7,10 +7,13 @@
   ],
   "rewrites": [
     { "source": "/", "destination": "/landing/dist/index.html" },
+
     { "source": "/sorting", "destination": "/sorting/dist/index.html" },
     { "source": "/sorting/(.*)", "destination": "/sorting/dist/index.html" },
+
     { "source": "/searching", "destination": "/searching/dist/index.html" },
     { "source": "/searching/(.*)", "destination": "/searching/dist/index.html" },
+
     { "source": "/pathfinding", "destination": "/pathfinding/dist/index.html" },
     { "source": "/pathfinding/(.*)", "destination": "/pathfinding/dist/index.html" }
   ]

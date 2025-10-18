@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "landing",
+    "sorting",
+    "searching",
+    "pathfinding"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace landing && npm run build --workspace sorting && npm run build --workspace searching && npm run build --workspace pathfinding"
+  }
+}
