@@ -1,3 +1,5 @@
+declare const hljs: any;
+
 import { useEffect } from "react";
 import { useStateStore } from "../store";
 import { algoDetails } from "./AlgoDetailsJSON";
