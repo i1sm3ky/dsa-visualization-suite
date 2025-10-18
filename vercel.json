@@ -1,17 +1,11 @@
 {
-  "builds": [
-    { "src": "landing/package.json", "use": "@vercel/static-build", "config": { "distDir": "landing/dist" } },
-    { "src": "sorting/package.json", "use": "@vercel/static-build", "config": { "distDir": "sorting/dist" } },
-    { "src": "searching/package.json", "use": "@vercel/static-build", "config": { "distDir": "searching/dist" } },
-    { "src": "pathfinding/package.json", "use": "@vercel/static-build", "config": { "distDir": "pathfinding/dist" } }
-  ],
-  "routes": [
-    { "src": "^/sorting/(.*)", "dest": "/sorting/$1" },
-    { "src": "^/sorting", "dest": "/sorting/index.html" },
-    { "src": "^/searching/(.*)", "dest": "/searching/$1" },
-    { "src": "^/searching", "dest": "/searching/index.html" },
-    { "src": "^/pathfinding/(.*)", "dest": "/pathfinding/$1" },
-    { "src": "^/pathfinding", "dest": "/pathfinding/index.html" },
-    { "src": ".*", "dest": "/landing/index.html" }
+  "rewrites": [
+    { "source": "/", "destination": "/landing" },
+    { "source": "/sorting", "destination": "/sorting" },
+    { "source": "/sorting/(.*)", "destination": "/sorting/$1" },
+    { "source": "/searching", "destination": "/searching" },
+    { "source": "/searching/(.*)", "destination": "/searching/$1" },
+    { "source": "/pathfinding", "destination": "/pathfinding" },
+    { "source": "/pathfinding/(.*)", "destination": "/pathfinding/$1" }
   ]
 }
