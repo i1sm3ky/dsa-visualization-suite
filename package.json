@@ -1,12 +1,10 @@
 {
-  "private": true,
-  "workspaces": [
-    "landing",
-    "sorting",
-    "searching",
-    "pathfinding"
-  ],
   "scripts": {
-    "build": "npm run build --workspace landing && npm run build --workspace sorting && npm run build --workspace searching && npm run build --workspace pathfinding"
+    "build": "npm run build:landing && npm run build:searching && npm run build:sorting && npm run build:pathfinding && npm run copy",
+    "build:landing": "cd landing && npm install && npm run build",
+    "build:searching": "cd searching && npm install && npm run build",
+    "build:sorting": "cd sorting && npm install && npm run build",
+    "build:pathfinding": "cd pathfinding && npm install && npm run build",
+    "copy": "rm -rf public && mkdir public && cp -r landing/build/* public/ && mkdir public/searching public/sorting public/pathfinding && cp -r searching/dist/* public/searching/ && cp -r sorting/dist/* public/sorting/ && cp -r pathfinding/build/* public/pathfinding/"
   }
 }
