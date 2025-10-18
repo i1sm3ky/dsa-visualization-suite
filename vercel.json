@@ -2,6 +2,9 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
 
+    { "source": "/searching", "destination": "/searching/index.html" },
+    { "source": "/searching/**", "destination": "/searching/index.html" },
+
     { "source": "/sorting", "destination": "/sorting/index.html" },
     { "source": "/sorting/**", "destination": "/sorting/index.html" },
 
