@@ -3,12 +3,12 @@
     { "source": "/", "destination": "/index.html" },
 
     { "source": "/searching", "destination": "/searching/index.html" },
-    { "source": "/searching/**", "destination": "/searching/index.html" },
-
+    { "source": "/searching/:match*", "destination": "/searching/index.html" },
+    
     { "source": "/sorting", "destination": "/sorting/index.html" },
-    { "source": "/sorting/**", "destination": "/sorting/index.html" },
+    { "source": "/sorting/:match*", "destination": "/sorting/index.html" },
 
     { "source": "/pathfinding", "destination": "/pathfinding/index.html" },
-    { "source": "/pathfinding/**", "destination": "/pathfinding/index.html" }
+    { "source": "/pathfinding/:match*", "destination": "/pathfinding/index.html" }
   ]
 }
