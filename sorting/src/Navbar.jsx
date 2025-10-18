@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar-div">
       <a href="" className="navbar-title-logo-link">
         <div className="navbar-logo-div">
-          <img className="navbar-logo" src="/Logo.svg" alt="Logo" />
+          <img className="navbar-logo" src="/sorting/Logo.svg" alt="Logo" />
         </div>
         <div className="navbar-title-div">
           Sorting Visualizer
