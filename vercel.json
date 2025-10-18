@@ -4,7 +4,7 @@
 
     { "source": "/searching", "destination": "/searching/index.html" },
     { "source": "/searching/:match*", "destination": "/searching/index.html" },
-    
+
     { "source": "/sorting", "destination": "/sorting/index.html" },
     { "source": "/sorting/:match*", "destination": "/sorting/index.html" },
 
