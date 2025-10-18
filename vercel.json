@@ -1,11 +1,14 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/landing" },
-    { "source": "/sorting", "destination": "/sorting" },
-    { "source": "/sorting/(.*)", "destination": "/sorting/$1" },
-    { "source": "/searching", "destination": "/searching" },
-    { "source": "/searching/(.*)", "destination": "/searching/$1" },
-    { "source": "/pathfinding", "destination": "/pathfinding" },
-    { "source": "/pathfinding/(.*)", "destination": "/pathfinding/$1" }
+    { "source": "/", "destination": "/landing/index.html" },
+
+    { "source": "/sorting", "destination": "/sorting/index.html" },
+    { "source": "/sorting/(.*)", "destination": "/sorting/index.html" },
+
+    { "source": "/searching", "destination": "/searching/index.html" },
+    { "source": "/searching/(.*)", "destination": "/searching/index.html" },
+
+    { "source": "/pathfinding", "destination": "/pathfinding/index.html" },
+    { "source": "/pathfinding/(.*)", "destination": "/pathfinding/index.html" }
   ]
 }
