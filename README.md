@@ -28,7 +28,7 @@ I built this project to:
 | ----------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | Searching   | Linear Search, Binary Search, Ternary Search, Jump Search, Interpolation Search     | Adjustable speed, array size, and more. Clean animations to compare algorithms visually.                                  |
 | Sorting     | Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort      | Multiple controls to tweak animations, sort size, and comparison between different sorting algorithms in multiple styles. |
-| Pathfinding | BFS, DFS, Dijkstra’s, A\*, Greedy Best-First, Swarm, Bidirectional Swarm + Maze Gen | Fully interactive: draw obstacles, drag start/end, switch between grid and graph, toggle real-time view.                  |
+| Pathfinding | BFS, DFS, Dijkstra’s, A\*, AO\*, Greedy Best-First, Swarm, Bidirectional Swarm + Maze Gen | Fully interactive: draw obstacles, drag start/end, switch between grid and graph, toggle real-time view.                  |
 | Landing     | Simple, clean landing page to navigate to each section                              | Minimal, focused, and easy to use                                                                                         |
 
 Each module is a standalone React app hosted together under one suite.
