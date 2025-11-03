@@ -1,0 +1,136 @@
+.details-div {
+  transform: translateY(100px);
+  padding: 0 1em;
+}
+
+.algo-name {
+  transition: all 0.3s;
+}
+
+.description-data,
+.complexities-table-div,
+.implementation-code-div-container {
+  border: 2px solid #e1c564;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -6px -6px 12px rgba(255, 255, 255, 0.1);
+}
+
+.description-complexities-div {
+  display: flex;
+  margin-top: 1.5em;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.description-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.description-data {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #ddd;
+  gap: 1em;
+  margin-bottom: 2em;
+  transition: all 0.3s;
+}
+
+.description-data strong {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.complexities-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.complexities-table-div {
+  display: flex;
+  flex-direction: column;
+  min-width: 370px;
+  max-width: 370px;
+  padding: 20px;
+  color: #ddd;
+}
+
+.complexities-div table {
+  border-style: hidden;
+  border-collapse: collapse;
+}
+
+.complexities-div th,
+.complexities-div td {
+  border: 2px solid rgba(240, 128, 128, 0.8);
+  padding: 5px;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.implementation-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-width: fit-content;
+}
+
+.implementation-code-div-container {
+  overflow-x: hidden;
+}
+
+.implementation-code-div {
+  width: fit-content;
+  max-width: calc(100vw - 4px - 2em);
+  background-color: #242424;
+  transition: all 0.3s;
+  overflow-x: auto;
+  cursor: initial;
+}
+
+.implementation-code-div pre {
+  padding: 1em;
+}
+
+.implementation-code-div pre code {
+  background-color: #242424 !important;
+}
+
+.hljs-ln-numbers {
+  border-right: 1em solid transparent;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.animate-data-change {
+  animation: animate-data-change 0.5s forwards ease-in-out;
+}
+
+@keyframes animate-data-change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .description-complexities-div {
+    flex-direction: column;
+    margin: 2em 0 3em 0;
+  }
+
+  .complexities-table-div {
+    min-width: fit-content;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .implementation-code-div {
+    font-size: 0.5em;
+  }
+}

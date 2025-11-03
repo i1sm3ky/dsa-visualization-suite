@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npm run build:landing && npm run build:searching && npm run build:sorting && npm run build:pathfinding && npm run copy",
+    "build:landing": "cd landing && npm install && npm run build",
+    "build:searching": "cd searching && npm install && npm run build",
+    "build:sorting": "cd sorting && npm install && npm run build",
+    "build:pathfinding": "cd pathfinding && npm install && npm run build",
+    "copy": "rm -rf public && mkdir -p public/searching public/sorting public/pathfinding && cp -r landing/dist/* public/ && cp -r searching/dist/* public/searching/ && cp -r sorting/dist/* public/sorting/ && cp -r pathfinding/dist/* public/pathfinding/"
+  }
+}

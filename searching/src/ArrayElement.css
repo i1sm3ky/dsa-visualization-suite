@@ -1,0 +1,235 @@
+.array-element {
+  width: 4em;
+  height: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 0.1em;
+  opacity: 0;
+  background: #8a89d2;
+  border-radius: 15%;
+  box-shadow: inset 9.91px 9.91px 15px #6564a4, inset -9.91px -9.91px 15px #abaaf1;
+  transition: background 0.3s, background-color 0.3s;
+}
+
+.element-index {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.element-value {
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.array-element-reveal {
+  animation: array-element-in 1s forwards;
+  animation-delay: calc(var(--array-element-in-delay) * 100ms);
+}
+
+.comparing {
+  animation: comparing calc(var(--comparing-speed) * 1ms) forwards;
+  --initial-pos: 100px;
+}
+
+.checking-element {
+  width: fit-content;
+  min-width: 4em;
+  height: 4em;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+  background: #ff9aa2;
+  border-radius: 15%;
+  box-shadow: inset 9.91px 9.91px 15px #d5787f, inset -9.91px -9.91px 15px #ffc3c9;
+}
+
+.reveal-target-element {
+  animation: target-element-in 1s forwards;
+}
+
+.comparing-arrow {
+  position: absolute;
+  top: 65%;
+  height: 65px;
+  transform: translateY(25px);
+  border-left: 3px solid violet;
+}
+
+.comparing-retract {
+  animation: comparing-retract calc(var(--comparing-speed) * 1ms);
+}
+
+.arrow-head {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid violet;
+  position: absolute;
+  left: -11.1px;
+  bottom: -2px;
+}
+
+.comparing-retract-arrow {
+  animation: comparing-retract-arrow calc(var(--comparing-speed) * 1ms);
+}
+
+.grey-out,
+.grey-out-binary {
+  background-color: grey;
+  box-shadow: inset 9.91px 9.91px 15px rgb(83, 83, 83), inset -9.91px -9.91px 15px rgb(163, 163, 163);
+}
+
+.grey-out-binary {
+  animation: array-element-out 1s forwards;
+  animation-delay: calc(var(--array-element-in-delay) * 100ms);
+}
+
+.found {
+  color: rgba(255, 255, 255, 0.87);
+  animation: found calc(var(--comparing-speed) * 1ms);
+  background: #89d28e;
+  box-shadow: inset 9.91px 9.91px 15px #68a56c, inset -9.91px -9.91px 15px #b2f8b7;
+}
+
+.low,
+.high,
+.mid-1,
+.mid-2,
+.prev {
+  width: 4em;
+  height: 4em;
+  border-radius: 15%;
+  opacity: 0.5;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.low {
+  background-color: yellow;
+}
+
+.high {
+  background-color: red;
+}
+
+.mid-1 {
+  background-color: darkorchid;
+}
+
+.mid-2 {
+  background-color: mediumblue;
+}
+
+.prev {
+  background-color: chocolate;
+}
+
+@keyframes array-element-in {
+  from {
+    transform: translateY(0px) scale(0.2) rotate(50deg);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(100px) scale(1) rotate(-2deg);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(100px) scale(1) rotate(1deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes target-element-in {
+  from {
+    transform: scale(0.2) rotate(50deg);
+  }
+  80% {
+    transform: scale(1) rotate(-2deg);
+  }
+  90% {
+    transform: scale(1) rotate(1deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes array-element-out {
+  from {
+    transform: translateY(100px) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(200px) scale(0.2) rotate(52deg);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(200px) scale(0.2) rotate(49deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(200px) scale(0.2) rotate(50deg);
+    opacity: 0;
+  }
+}
+
+@keyframes comparing {
+  from {
+    transform: translateY(var(--initial-pos));
+  }
+  50% {
+    transform: translateY(calc(var(--initial-pos) - 50px));
+  }
+  to {
+    transform: translateY(var(--initial-pos));
+  }
+}
+
+@keyframes comparing-retract {
+  from {
+    height: 65px;
+  }
+  50% {
+    height: 20px;
+  }
+  to {
+    height: 65px;
+  }
+}
+
+@keyframes comparing-retract-arrow {
+  from {
+    bottom: -2px;
+  }
+  50% {
+    bottom: -1px;
+  }
+  to {
+    bottom: -2px;
+  }
+}
+
+@keyframes found {
+  from {
+    background: #8a89d2;
+    box-shadow: inset 9.91px 9.91px 15px #6564a4, inset -9.91px -9.91px 15px #abaaf1;
+  }
+  50% {
+    background: #8a89d2;
+    box-shadow: inset 9.91px 9.91px 15px #6564a4, inset -9.91px -9.91px 15px #abaaf1;
+  }
+  to {
+    background: #89d28e;
+    box-shadow: inset 9.91px 9.91px 15px #68a56c, inset -9.91px -9.91px 15px #b2f8b7;
+  }
+}

@@ -1,0 +1,28 @@
+.grid {
+  width: 90vw;
+  display: grid;
+}
+
+.grid-interaction-disabled {
+  pointer-events: none;
+}
+
+.path-object {
+  position: absolute;
+  height: 1em;
+  width: 2em;
+  background-image: url("/car.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 2;
+  transition: top 0.3s, left 0.3s, opacity 0.3s, transform 0.3s;
+  will-change: top, left, opacity, transform;
+}
+
+@media screen and (max-width: 500px) {
+  .path-object {
+    height: 0.5em;
+    width: 1em;
+  }
+}
