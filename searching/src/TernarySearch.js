@@ -2,7 +2,7 @@ import { moveTo, showOutput } from "./HelperFunctions.js";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const BinarySearch = async (arrayElements, target, speed) => {
+const TernarySearch = async (arrayElements, target, speed) => {
   document.querySelector(".checking-element > .element-value").innerHTML = target;
   document.querySelectorAll("button").forEach((btn) => (btn.disabled = true));
   document.querySelectorAll("input").forEach((btn) => (btn.disabled = true));
@@ -32,8 +32,8 @@ const BinarySearch = async (arrayElements, target, speed) => {
     for (let index = 0, count = 0; index < low; index++) setTimeout(() => document.querySelector(`.array-element-${index}`).classList.add("grey-out-binary"), count++ * 10);
     for (let index = arrayElements.length - 1, count = 0; index > high; index--) setTimeout(() => document.querySelector(`.array-element-${index}`).classList.add("grey-out-binary"), count++ * 10);
 
-    let mid1 = Math.floor(low + (high - low) / 3);
-    let mid2 = Math.floor(high - (high - low) / 3);
+    let mid1 = low + Math.floor((high - low) / 3);
+    let mid2 = high - Math.floor((high - low) / 3);
 
     if (low === high) {
       document.querySelector(".low").style.opacity = 0;
@@ -157,4 +157,4 @@ const BinarySearch = async (arrayElements, target, speed) => {
   }, greyedOutElements.length * 100 + 1000);
 };
 
-export default BinarySearch;
+export default TernarySearch;
